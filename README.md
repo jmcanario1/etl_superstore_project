@@ -18,7 +18,7 @@ Este projeto é **educacional**, ideal para quem está começando a aprender sob
 
 ## 📁 Estrutura do Projeto
 
-etl_superstore_project/
+```etl_superstore_project/
 ├── data/
 │ ├── raw/ # Dados brutos (original CSV)
 │ └── processed/ # Dados transformados
@@ -29,7 +29,7 @@ etl_superstore_project/
 │ └── load.py # Salvamento dos dados processados
 ├── etl_pipeline.py # Script principal que executa o ETL
 ├── requirements.txt # Dependências do projeto
-└── README.md # Este arquivo
+└── README.md # Este arquivo```
 
 ---
 
