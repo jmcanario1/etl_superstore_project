@@ -1,9 +1,13 @@
 import logging
 import os
+import sqlite3
 from etl import extract, transform, load
 
-#Configure Logging
+# Configure Logging
 logger = logging.getLogger(__name__)
+
+# Configure Database Connection
+conn = sqlite3.connect('data/processed/elt_superstore.db')
 
 def main():
   # Setting up logging to file
@@ -23,9 +27,9 @@ def main():
 
   if transformed_data is not None:
     logger.info('Transformation complete')
-    load(transformed_data)
+    load(transformed_data, conn)
 
-  if os.path.exists('data/processed/superstore_transformed.csv'):
+  if os.path.exists('data/processed/superstore_processed.csv'):
     logger.info('Loading complete')
 
 if __name__ == "__main__":

@@ -7,6 +7,7 @@ logger = logging.getLogger(__name__)
 def transform(data):
   """
   Transforms the extracted data.
+  Creates new dataframes with additional data.
   """
 
   if data.isnull().values.any():
